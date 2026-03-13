@@ -1,0 +1,35 @@
+.lang-btn {
+	--color: #333;
+	
+	transition: transform 0.2s cubic-bezier(.3, .7, .4, 1);
+	
+	&::before,&::after,span::before,span {
+		transition: inherit;
+		border-radius: inherit;
+		box-shadow: 1px 1px 0px 0px var(--color), 2px 2px 0px 0px var(--color), 3px 3px 0px 0px var(--color);
+	}
+	
+	&::before,&::after,span::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		inset:0;
+	}
+	
+	&::before {
+		transform: translate(2px,2px);
+	}	
+	
+	&:hover {
+		span {
+			transform: translate(-2px,-2px);
+		}
+	}
+	
+	&:active {
+		span, &::after {
+			transform: translate(2px,2px);
+		}
+	}
+	
+}

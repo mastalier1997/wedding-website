@@ -1,9 +1,10 @@
+import DeleteCookie from "@/src/components/DeleteCookie";
 import Image from "next/image";
-import Button from "./components/Button";
 
 export default function Home() {
   return (
     <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+       
       <Image
         alt="Rome"
         src="/rome.jpg"
@@ -11,6 +12,8 @@ export default function Home() {
         style={{ objectFit: "cover" }}
         sizes="100vw"
       />
+     
     </div>
+    /*<DeleteCookie />*/
   );
 }
